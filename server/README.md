@@ -175,3 +175,8 @@ PORT=5000 # Optional, defaults to 5000
 - `PORT`: (Optional) Port for the server to run on
 
 ---
+
+## 🚀 Deploy
+
+[View Live Demo](https://gfmnow-assignment.onrender.com)
+
