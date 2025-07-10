@@ -69,3 +69,6 @@ The app will be available at [http://localhost:3000](http://localhost:3000).
 - Update API endpoints as needed in your code.
 
 ---
+## 🚀 Live Demo
+
+👉 [Click here to see the deployed app!](https://gfmnow-assignment.vercel.app/)
