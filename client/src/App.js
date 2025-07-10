@@ -9,13 +9,7 @@ import {
 import Navbar from "./components/Navbar/Navbar";
 import LoginModal from "./components/LoginModel/LoginModal";
 import ProtectedRoute from "./protectedRoute/ProtectedRoute";
-
-const Profile = ({ user }) => (
-  <div className="p-4">
-    <h2>Profile</h2>
-    <pre>{JSON.stringify(user, null, 2)}</pre>
-  </div>
-);
+import Profile from "./components/Profile/Profile";
 
 function useAuthToken() {
   const [token, setToken] = useState(() => localStorage.getItem("jwt_token"));
@@ -57,7 +51,10 @@ function AppRoutes() {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
-      .then((data) => setUser(data.user))
+      .then((data) => {
+        setUser(data.user);
+        // console.log(data);
+      })
       .catch(() => setUser(null));
   }, [token]);
 
